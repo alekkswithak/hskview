@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <h2>Random word from HSK{{ hsk.hsklevel }}</h2>
+
+  <h3>{{ word.simplified }}</h3>
+  <h3>{{ word.traditional }}</h3>
+  <h3>{{ word.pinyinnumbers }}</h3>
+  <h3>{{ word.pinyintones }}</h3>
+  <h3>{{ word.definition }}</h3>
+
+{% endblock %}

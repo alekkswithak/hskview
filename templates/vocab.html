@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+  <table class="vocab">
+    <tr>
+      <th>Simplified</th>
+      <th>Traditional</th>
+      <th>Pinyin Numbers</th>
+      <th>Pinyin Tones</th>
+      <th>Definition</th>
+      <th>Save</th>
+    </tr>
+    {% for word in words %}
+    <tr>
+      <td><a href="{{ url_for('word', word_id=word.id) }}">{{ word.simplified }}</a></td>
+      <td>{{ word.traditional }}</td>
+      <td>{{ word.pinyinnumbers }}</td>
+      <td>{{ word.pinyintones }}</td>
+      <td>{{ word.definition }}</td>
+      <td>{{ }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
